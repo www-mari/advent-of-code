@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.IOException;
 import java.io.*;
+import java.lang.*;
 
 public class day5 {
 
@@ -24,7 +25,7 @@ public class day5 {
         }
 
         for(int i = 0; i < inputlist.size(); i++){
-            String [] spl = inputlist.get(0).split(" -> ");
+            String [] spl = inputlist.get(0).toString().split(" -> ");
 
             String point1 = spl[0];
             String point2 = spl[1];
@@ -32,20 +33,20 @@ public class day5 {
             String [] p1 = point1.split(",");
             String [] p2 = point2.split(",");
 
-            String x1 = p1[0];
-            String y1 = p1[1];
-            String x2 = p2[0];
-            String y2 = p2[1];
+            int x1 = Integer.parseInt(p1[0]);
+            int y1 = Integer.parseInt(p1[1]);
+            int x2 = Integer.parseInt(p2[0]);
+            int y2 = Integer.parseInt(p2[1]);
 
             if(x1 == x2){
-                for(int i = y1; i < y2; i++){
-                    String p = x1 + "," + i;
+                for(int j = y1; j < y2; j++){
+                    String p = x1 + "," + j;
                     points.put(p, 1);
                 }
             } 
             if(y1 == y2) {
-                for(int i = x1; i < x2, i++){
-                    String p = i + "," + y1;
+                for(int k = x1; k < x2; k++){
+                    String p = k+ "," + y1;
                     points.put(p, 1);
                 }
             } 
