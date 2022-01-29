@@ -1,7 +1,6 @@
 import java.util.*;
 import java.io.IOException;
 import java.io.*;
-import java.lang.*;
 
 public class day5 {
 
