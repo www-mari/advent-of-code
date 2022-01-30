@@ -69,7 +69,7 @@ public class day4 {
     }
 
     public static int check(int[][][] marked){
-        int card_number = 0; 
+        int winning_card_number = 0;
 
         for(int i = 0; i < 100; i++){ //card number
             for(int j = 0; j < 5; j++){ //row number
@@ -79,7 +79,7 @@ public class day4 {
             }
         }
         //System.out.println("checked for winner");
-        return 0;
+        return winning_card_number;
     }
 
     public static void winner(int[][][] cards, int card, String calling, int call_index){
